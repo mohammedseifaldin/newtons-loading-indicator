@@ -1,0 +1,21 @@
+name: newtons_cradle_loading_indicator
+description: A loading indicator that resembles Newton's cradle
+version: 0.0.1
+homepage: newton_loading_indicator
+
+environment:
+  sdk: '>=3.1.2 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  assets:
+    -  assets/hit_sound.mp3
