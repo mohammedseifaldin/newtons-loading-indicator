@@ -1,7 +1,7 @@
 name: newtons_cradle_loading_indicator
 description: A loading indicator that resembles Newton's cradle
 version: 0.0.1
-homepage: newton_loading_indicator
+homepage: https://github.com/mohammedseifaldin/newtons-loading-indicator.git
 
 environment:
   sdk: '>=3.1.2 <4.0.0'
