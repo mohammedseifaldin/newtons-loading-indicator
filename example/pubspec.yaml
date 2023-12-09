@@ -8,8 +8,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  newtons_cradle_loading_indicator:
-    path: ../
+  newtons_cradle_loading_indicator:  ^0.0.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

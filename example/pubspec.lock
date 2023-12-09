@@ -102,9 +102,10 @@ packages:
   newtons_cradle_loading_indicator:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      name: newtons_cradle_loading_indicator
+      sha256: c40fca23ec01748e3fc74cf872141e4036792ab3f9287ead1b9808a632a15540
+      url: "https://pub.dev"
+    source: hosted
     version: "0.0.1"
   path:
     dependency: transitive

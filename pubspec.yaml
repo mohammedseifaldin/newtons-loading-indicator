@@ -1,11 +1,11 @@
 name: newtons_cradle_loading_indicator
 description: A loading indicator that resembles Newton's cradle
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/mohammedseifaldin/newtons-loading-indicator.git
 
 environment:
-  sdk: '>=3.1.2 <4.0.0'
-  flutter: ">=1.17.0"
+  sdk: '>=2.12.0 <4.0.0'
+  flutter: ">=1.20.0"
 
 dependencies:
   flutter:
@@ -19,3 +19,28 @@ dev_dependencies:
 flutter:
   assets:
     -  assets/hit_sound.mp3
+  plugin:
+    platforms:
+      android:
+        package: come.example.newton
+        pluginClass: SaifPackage
+      ios:
+        pluginClass: SaifPackage
+      linux:
+        pluginClass: SaifPackage
+      macos:
+        pluginClass: SaifPackage
+      web:
+        pluginClass: SaifPackage
+      windows:
+        pluginClass: SaifPackage
+#
+screenshots:
+  - description: 'Screenshot of the widget'
+    path:  'assets/screenshot.png'
+
+topics:
+  -  loading
+  -  animation
+  -  education
+  -  widgets
