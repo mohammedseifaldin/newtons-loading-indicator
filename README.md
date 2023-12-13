@@ -7,7 +7,11 @@ A Loading Animation resembles Newton's cradle ,it's beautiful to use with educat
 - ⭐ very simple to use
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/hivedb/hive/master/.github/logo_transparent.svg?sanitize=true" width="350px">
+  <img src="https://raw.githubusercontent.com/mohammedseifaldin/newtons-loading-indicator/master/assets/screenshot.png" width="350px">
 </p>
+
+## TODO
+- [ ] let user set the swinging balls and fixed balls number manually
+- [ ] make the balls more beautiful and 3D look
 
 

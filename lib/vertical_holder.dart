@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class VerticalHolder extends StatelessWidget {
-  const VerticalHolder({required this.width,super.key});
+  const VerticalHolder({required this.width, super.key});
+
   final double width;
+
   @override
   Widget build(BuildContext context) {
     return Container(

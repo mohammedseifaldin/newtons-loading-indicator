@@ -1,32 +1,33 @@
 import 'package:flutter/material.dart';
 
-class ConstBall extends StatelessWidget {
-  const ConstBall({
+class RopeAndBall extends StatelessWidget {
+  const RopeAndBall({
     required this.ballColor,
-    required this.threadColor,
-    required this.ballSize,
+    required this.ropeColor,
+    required this.ballDiameter,
     super.key,
   });
 
-  final double ballSize;
+  final double ballDiameter;
   final Color ballColor;
-  final Color threadColor;
+  final Color ropeColor;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
+      //to not match the ground ;)
       padding: const EdgeInsets.only(bottom: 12),
       child: Column(
         children: [
           Expanded(
             child: Container(
               width: 2,
-              color: threadColor,
+              color: ropeColor,
             ),
           ),
           Container(
-            height: ballSize,
-            width: ballSize,
+            height: ballDiameter,
+            width: ballDiameter,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               gradient: RadialGradient(

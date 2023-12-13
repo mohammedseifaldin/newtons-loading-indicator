@@ -4,9 +4,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import 'animated_ball.dart';
-import 'ball.dart';
 import 'horizontal_holder.dart';
+import 'rope_and_ball.dart';
+import 'swing_child.dart';
 import 'vertical_holder.dart';
 
 class NewtonLoadingIndicator extends StatefulWidget {
@@ -15,9 +15,10 @@ class NewtonLoadingIndicator extends StatefulWidget {
   final Color? mainColor;
   final double? ballSize;
   final double? holderThick;
-  final Color threadColor;
+  final Color ropeColor;
   final double rotationDegree;
   final Duration animationDuration;
+
   // final bool allowCrossBoundaries;
   // final bool wantHitSound;
 
@@ -28,7 +29,7 @@ class NewtonLoadingIndicator extends StatefulWidget {
     this.mainColor,
     this.ballSize,
     this.rotationDegree = 45,
-    this.threadColor = Colors.grey,
+    this.ropeColor = Colors.grey,
     // this.allowCrossBoundaries = false,
     // this.wantHitSound = true,
     this.animationDuration = const Duration(milliseconds: 1500),
@@ -95,30 +96,31 @@ class _NewtonLoadingIndicatorState extends State<NewtonLoadingIndicator>
                     children: [
                       VerticalHolder(width: holderThick),
                       const Spacer(),
-                      AnimatedBall(
-                        clockwise: true,
-                        mainColor: ballColor,
+                      SwingChild(
+                        inClockwiseDir: true,
                         animation: _animation,
-                        ballSize: ballSize,
-                        threadColor: widget.threadColor,
-                        // playSound: widget.wantHitSound,
+                        child: RopeAndBall(
+                          ballColor: ballColor,
+                          ropeColor: widget.ropeColor,
+                          ballDiameter: ballSize,
+                        ),
                       ),
                       ...List<Widget>.generate(
-                          ballsNum - 2,
-                          (_) => ConstBall(
-                                ballColor: ballColor,
-                                ballSize: ballSize,
-                                threadColor: widget.threadColor,
-                              )),
-                      AnimatedBall(
-                        clockwise: false,
-                        mainColor: ballColor,
-                        ballSize: ballSize,
+                        ballsNum - 2, //2 is for 2 swinging balls
+                        (_) => RopeAndBall(
+                          ballColor: ballColor,
+                          ballDiameter: ballSize,
+                          ropeColor: widget.ropeColor,
+                        ),
+                      ),
+                      SwingChild(
+                        inClockwiseDir: false,
                         animation: _animation,
-                        threadColor: widget.threadColor,
-                        // // playSound: widget.wantHitSound,
-                        // playSound:
-                        //     false, //only one AnimatedBall will run the sound
+                        child: RopeAndBall(
+                          ballColor: ballColor,
+                          ballDiameter: ballSize,
+                          ropeColor: widget.ropeColor,
+                        ),
                       ),
                       const Spacer(),
                       VerticalHolder(width: holderThick),
